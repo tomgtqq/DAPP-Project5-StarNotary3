@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>StarNotary</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Subrayada|Ubuntu:400,700" rel="stylesheet">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles.css">
+
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+
+  <!-- bootstrap scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <section class="colored-section" id="title">
+    <div class="container-fluid">
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark ">
+        <a class="navbar-barand" href="">StarNotary</a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Pricing">Pricing</a> </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#cta">Download</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+
+  <section class="white-section" id="star">
+
+    <h2 class="section-heading">The Star's Story</h2>
+    <h4>You can Claim a star, Sell a star,Buy a star.</h4>
+
+    <div class="row">
+      <div class="pricing-column col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h3>Status</h3>
+          </div>
+          <div class="card-body">
+            <h5 id="status"></h5>
+          </div>
+        </div>
+      </div>
+      <div class="pricing-column col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3>Claim a Star</h3>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="input-group form-group">
+                <input class="form-control" type="text" placeholder="Name" id="starName"></input>
+              </div>
+              <div class="input-group form-group">
+                <input class="form-control" type="number" min="1" placeholder="Token ID" id="starId"></input>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-lg btn-block btn-outline-dark" id="createStar" onclick="App.createStar()">Create a Star</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="pricing-column col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3>Read a Star</h3>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="input-group form-group">
+                <input type="number" min="1" class="form-control" placeholder="Token ID" id="lookupById">
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-lg btn-block btn-outline-dark" id="lookupStar" onclick="App.lookUp()">Lookup a Star</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="pricing-column col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3>Sell a Star</h3>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="input-group form-group">
+                <input type="number" min="1" class="form-control" placeholder="Token ID" id="sellById">
+              </div>
+              <div class="input-group form-group">
+                <input type="number" min="1" class="form-control" placeholder="Set Price" id="sellPrice">
+                <select name="unit" id="sellUnit" class="col2_2_2IwRhx">
+                  <option data-unit="wei">wei</option>
+                  <option data-unit="gwei">gwei</option>
+                  <option data-unit="finney">finney</option>
+                  <option data-unit="ether">ether</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-lg btn-block btn-outline-dark" id="sell" onclick="App.sell()">Sell a Star</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="pricing-column col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3>Buy a Star</h3>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="input-group form-group">
+                <input type="number" min="1" class="form-control" placeholder="Token ID" id="buyById">
+              </div>
+              <div class="input-group form-group">
+                <input type="number" min="1" class="form-control" placeholder="Call Price" id="buyPrice">
+                <select name="unit" id="buyUnit" class="col2_2_2IwRhx">
+                  <option data-unit="wei">wei</option>
+                  <option data-unit="gwei">gwei</option>
+                  <option data-unit="finney">finney</option>
+                  <option data-unit="ether">ether</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-lg btn-block btn-outline-dark" id="buy" onclick="App.buy()">Buy a Star</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="pricing-column col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3>Exchange Stars</h3>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="input-group form-group">
+                <input class="form-control" type="number" min="1"  placeholder="Your Token ID" id="myID"></input>
+              </div>
+              <div class="input-group form-group">
+                <input class="form-control" type="number" min="1" placeholder="The opponent's Token ID" id="opponentID"></input>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-lg btn-block btn-outline-dark" id="exchangeStars" onclick="App.exchangeStars()">Exchange Stars</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Call to Action -->
+
+  <section class="colored-section" id="cta">
+    <div class="container-fluid">
+      <h3 class="big-heading"> Find your stars in the vast universe.</h3>
+      <button type="button" class="btn btn-dark btn-lg download-button"><span class="fab fa-apple"></span> Download</button>
+      <button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fab fa-google-play"></i> Download</button>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer class="white-section" id="footer">
+    <div class="container-fluid">
+      <a class="footer-link" href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+      <a class="footer-link" href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+      <a class="footer-link" href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+      <a class="footer-link" href="mailto:screenname@qq.com"><i class="fas fa-envelope"></i></i></a>
+      <p class="footer-Copyright">© Copyright 2019 StarNotary</p>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+
+</html>

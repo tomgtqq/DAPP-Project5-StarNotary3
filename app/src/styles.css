@@ -1,0 +1,108 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat-bold", sans-serif;
+}
+
+/* Containers */
+
+.container-fluid {
+  padding: 7% 15%;
+}
+
+/* Sections */
+
+.colored-section{
+  background-color: #393e46;
+  color: #fff;
+}
+.white-section{
+  background-color: #f3f9fb;
+}
+
+/* Headings */
+
+#title .container-fluid {
+  text-align: left;
+  padding: 3% 15% 7%;
+}
+
+.big-heading {
+  font-family: "Montserrat-Black";
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+.section-heading {
+  padding-top: 2rem;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+/* navigation Bar */
+
+.navbar {
+  padding: 0 0 5rem;
+}
+
+.navbar-barand {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-family: "Montserrat-light";
+}
+
+/* Downlad Buttons */
+
+.download-button {
+  margin: 5% 3% 5% 0;
+}
+
+/* Price Section */
+
+#pricing {
+  padding: 100px;
+}
+
+.pricing-column {
+  padding: 3% 2%;
+}
+
+.price-text {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+/* Footer Section */
+
+.footer-link {
+  color: #000;
+  margin: auto 10px;
+}
+
+.footer-Copyright {
+  margin-top: 10px;
+}
+
+@media (max-width:1028px) {
+  #title {
+    text-align: center;
+  }
+
+  .title-image {
+    position: static;
+    transform: rotate(0);
+  }
+}
