@@ -3,11 +3,11 @@
 The "StarNotary" is decentralized service , using ES6 with truffle box Webpack. It allows users to claim ownership of their favorite star , lookup a star, sell a star, buy a star in the night sky .
 
 #### Info of project
-Truffle version : "5.0.20 (core: 5.0.20)"
-OpenZeppelin version : "2.1.2"
-ERC-721 Token Name : "MercuryToken"
-ERC-721 Token Symbol : "MET"
-Token Address: "0xFFfCd5594dD56d27EB5f38f6Ab40b7A17bd5b939"
+* Truffle version : "5.0.20 (core: 5.0.20)"
+* OpenZeppelin version : "2.1.2"
+* ERC-721 Token Name : "MercuryToken"
+* ERC-721 Token Symbol : "MET"
+* Token Address: "0xFFfCd5594dD56d27EB5f38f6Ab40b7A17bd5b939"
 on the Rinkeby Network
 
 ## Prerequisites
