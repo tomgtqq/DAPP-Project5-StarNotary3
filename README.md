@@ -2,6 +2,7 @@
 
 The "StarNotary" is decentralized service , using ES6 with truffle box Webpack. It allows users to claim ownership of their favorite star , lookup a star, sell a star, buy a star in the night sky .
 
+![homepage](./src/homepage.png)
 #### Info of project
 * Truffle version : "5.0.20 (core: 5.0.20)"
 * OpenZeppelin version : "2.1.2"
