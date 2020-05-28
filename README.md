@@ -131,6 +131,7 @@ It seems like Running a V8 in your computer. The artifacts is resolver, So we ca
  const mnemonic = fs.readFileSync(".secret").toString().trim();```
 
 ```
+```
  rinkeby: {
   provider: () => new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/${infuraKey}`),
     network_id: 4,       // rinkeby's id
@@ -144,7 +145,6 @@ Deploy Contract to Rinkeby:
 ```
 $ truffle migrate --reset --network rinkeby
 ```
-
 ## Versioning
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
