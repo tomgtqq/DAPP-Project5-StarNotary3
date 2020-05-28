@@ -151,7 +151,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Tom gt** - *Fullstack egineer* - [github profile](https://github.com/tomgtbst)
+* **Tom Ge** - *Fullstack egineer* - [github profile](https://github.com/tomgtqq)
 
 
 ## License
